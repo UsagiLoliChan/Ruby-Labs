@@ -17,7 +17,7 @@ class DegreeTranslator
     when 'K'
       oval + 273.15
     when 'F'
-      (9.0 / 5.0) * oval + 32.0
+      9.0 * oval / 5.0 + 32.0
     end
   end
 
@@ -26,16 +26,16 @@ class DegreeTranslator
     when 'C'
       oval - 273.15
     when 'F'
-      5.0 * (oval - 32.0) / 9 + 273.15
+      (oval - 273.15) * 9.0 / 5.0 + 32.0
     end
   end
 
   def conversion_f(oval, nscale)
     case nscale
     when 'C'
-      (5.0 / 9.0) * (oval - 32.0)
+      (oval - 32.0) * 5.0 / 9.0
     when 'K'
-      9.0 * (oval - 273.15) / 5.0 + 32.0
+      (oval - 32.0) * 5.0 / 9.0 + 273.15
     end
   end
 end
