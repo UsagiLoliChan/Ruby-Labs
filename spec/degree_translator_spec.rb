@@ -1,4 +1,4 @@
-require '../lib/degree_translator'
+require './lib/degree_translator'
 
 RSpec.describe DegreeTranslator do
   describe 'translator' do
